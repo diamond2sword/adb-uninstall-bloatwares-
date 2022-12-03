@@ -23,11 +23,14 @@ ua () {
 }
 
 ual () {
-  echo UNINSTALL "$(l s $1)" [y/N]:
-  sleep 1s
+  query=$(l s $1)
+  [ -z ${query[@]} ] && {
+    return
+  }
+  echo UNINSTALL ${query[@]} [y/N]:
   read response
   [ $response == "y" ] && {
-    ua $(l s $1)
+    ua ${query[@]}
   }
 }
 
