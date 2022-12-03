@@ -24,6 +24,7 @@ ua () {
 
 ual () {
   echo UNINSTALL "$(l s $1)" [y/N]:
+  sleep 1s
   read response
   [ $response == "y" ] && {
     ua $(l s $1)
