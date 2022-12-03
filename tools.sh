@@ -22,6 +22,13 @@ ua () {
   done
 }
 
+v () {
+  strings=("$@")
+  for string in ${strings[@]}; do
+    echo $string
+  done
+}
+
 ual () {
   query=$(l s $1)
   [ -z ${query[@]} ] && {
@@ -49,5 +56,6 @@ ual_q () {
 }
 
 #OPPO A16K SAFE BLOATWARES
-yes | ual_q maps phonemanager heytap.music music files fileman gall game photos themesto cloud keep you android.cale roam po.cam video googlequick market leassis
+yes | ual_q maps phonemanager heytap.music music files fileman gall game photos latin
+yes | ual_q themesto cloud keep you android.cale roam po.cam video googlequick market leassis radio
 u package:com.google.android.gm package:com.coloros.gamespaceui
