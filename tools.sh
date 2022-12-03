@@ -34,7 +34,8 @@ ual () {
   [ -z ${query[@]} ] && {
     return
   }
-  echo UNINSTALL ${query[@]} [y/N]:
+  v ${query[@]}
+  echo UNINSTALL [y/N]:
   read response
   [ $response == "y" ] && {
     ua ${query[@]}
